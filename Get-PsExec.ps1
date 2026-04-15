@@ -7,7 +7,12 @@ function Get-PsExec
     )
 
     $pstoolsUri = "https://download.sysinternals.com/files/PSTools.zip"
-    $outputPath = "C:\Temp\PSTools"
+    $tempFolder = "C:\Temp"
+    if( ! (Test-Path -Path $tempFolder) )
+    {
+        $tempFolder = $env:TEMP
+    }
+    $outputPath = "$tempFolder\PSTools"
     if( ! (Test-Path -Path "$outputPath\psexec64.exe") )
     {
         $currentProgressPreference = $ProgressPreference
