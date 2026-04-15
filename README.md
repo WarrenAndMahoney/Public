@@ -1,3 +1,9 @@
+# Get-PsExec.ps1
+
+Function to download and optionally start PsExec from [SysInternals](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec)
+
+Could be added to `Uninstall-Revit.ps1`
+
 # Uninstall-Revit.ps1
 
 Uninstall Revit or 3ds Max versions later than 2020
